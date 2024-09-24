@@ -1,0 +1,503 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Saira:wght@700&display=swap');
+/*  fonts 1.Poppins 2.Saira
+font size 300-400-500-600-700 */
+
+
+:root {
+    --primary-color: #033b4a;
+    --secondary-color: #20c997;
+    --gray: #4a4a4d;
+    --bg-primary: #ecf0f3;
+}
+/* four main colors for our website */
+ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* as a start we should put this features */
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+/* the main fount for our website is poppins */
+
+h1 ,h2 {
+    font-family: 'Saira', sans-serif;
+}
+/* all h1 and h2 in Saira font */
+
+ul{
+    list-style: none;
+}
+/* to remove the balls that comes with the list */
+
+a{
+    text-decoration: none;
+}
+/* to delete the underline that come with the links */
+
+/* header */
+    /* NAVBAR */
+header{
+    background-color: var(--bg-primary);
+    height: 100vh;
+}
+/* give full size  */
+header .navbar{
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+    position: fixed;
+    width: 100%;  
+}
+/* edit the nav bar
+make the background color white and add a border bottom to يفصل between the ...
+position fixed and width 100 to full the page */
+
+header .navbar nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+    padding: 1.5rem 2rem;
+    /* background-color: red; */
+}
+/* now we order the elements by make them flex and add between anas rauf and other nav elements a space
+and then we center them and add a max width to make the shape looks good
+1 rem = 20px and its better to use rem instead of px in some cases */
+header .navbar nav ul{
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+/* make the nav element display flex */
+header .navbar nav ul a{
+    margin: 0 15px;
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: all 0.01s ease-in;
+}
+
+header .navbar nav ul a:hover{
+    border-bottom: solid black 3px;
+    transform: scale(1.5);
+    color: var(--secondary-color);
+    transform: scale(0.7) ;
+}
+header .navbar nav ul a:hover{
+    font-weight: 700;
+}
+/* features for a and add hover for them */
+.logo{
+    color: var(--primary-color);
+    font-size: 24px;
+    font-weight: 700;
+    animation-name: ff;
+    animation-duration:3s ;
+}
+@keyframes ff{
+    from{
+        color: var(--secondary-color);
+        font-weight: 600;
+        font-size: 20px;
+    }
+    to{
+        color: var(--primary-color);
+        font-weight: 700;
+        font-size: 28px;
+    }
+}
+/* logo=anas anam 
+add features to anas anam */
+    /* done with navbar */
+
+header .content{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    max-width: 1100px;
+    margin: auto;
+    height: 100%;
+    align-items: center;
+    padding: 5rem 2rem 0;
+    /* background-color: red; */
+}
+header .content img{
+    max-width: 300px;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+header .content img:hover{
+    transform: scale(1.07);
+}
+
+.stext{
+    color: var(--secondary-color);
+    animation-name: ss;
+    animation-duration:5s ;
+}
+@keyframes ss{
+    from{
+        color: var(--primary-color);
+    }
+    to{
+        color: var(--secondary-color);
+    }
+}
+
+
+
+.content p span{
+    font-weight: 700;
+    font-size: 20px;
+}
+.content h1 {
+    font-size: 60px;
+    color: var(--primary-color);
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    animation-name: hh;
+    animation-duration:5s ;
+}
+@keyframes hh{
+    from{
+        color: var(--secondary-color);
+    }
+    to{
+        color: var(--primary-color);
+    }
+}
+
+
+.job{
+    font-size: 20px;
+    color: var(--primary-color);
+    margin: 10px 0;
+    font-weight: 500;
+    animation-name: hh;
+    animation-duration:5s ;
+}
+@keyframes hh{
+    from{
+        color: var(--secondary-color);
+    }
+    to{
+        color: var(--primary-color);
+    }
+}
+
+.social{
+    margin: 1rem 0 2rem;
+}
+.social a i{
+    font-size: 20px;
+    padding: 10px;
+    margin-right: 10px;
+    background-color: var(--gray);
+    color: white;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    animation-name: dd;
+    animation-duration:5s ;
+}
+@keyframes dd{
+    from{
+        color: var(--primary-color);
+    }
+    to{
+        color: white;
+    }
+}
+
+
+.social a i:hover{
+    transform: scale(1.5);
+    
+    color: var(--gray);
+    background-color: white;
+}
+.aboutme , button , .back{
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 8px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+.aboutme{
+
+    animation-name: dd;
+    animation-duration:5s ;
+}
+@keyframes dd{
+    from{
+        background-color: var(--primary-color);
+    }
+    to{
+        background-color: var(--secondary-color);
+    }
+}
+
+
+.aboutme:hover , button:hover , .back:hover{
+    transition: all 0.3s ease;
+    color: black;
+    background-color: #15a076;
+}
+.text{
+    margin-bottom: 5rem;
+}
+/* header */
+
+.myname{
+    color: var(--secondary-color);
+}
+
+.container{
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 2rem;
+    /* background-color: red; */
+}
+
+
+.about , .skills {
+    padding: 6rem 0 ;
+}
+
+.about h2 , .skills h2 , .serveses h2 {
+    text-align: center;
+    font-size: 38px;
+    color: var(--primary-color);
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.about hr , .skills hr , .serveses hr{
+    width: 100px;
+    height: 3px;
+    border: none;
+    background: var(--secondary-color);
+    margin: 5px auto 0;
+}
+
+.aboutcontent{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 3rem;
+}
+
+.col1 h3{
+    font-size: 28px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.col1 p{
+    color: var(--gray);
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+.col2 p{
+    color: var(--gray);
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.abi{
+    color: var(--secondary-color);
+}
+
+
+
+
+
+.skills h2{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.skills , .contact{
+    background-color: var(--primary-color);
+}
+
+.skills .row img {
+    max-width: 65px;
+    border-radius: 20%;
+}
+
+.skilscontent{
+    margin-top:4rem;
+    background-color: #0f272d;
+}
+.skilscontent .row{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    align-items: center;
+    text-align: center;
+}
+.skilscontent .item{
+    color: white;
+    background-color: black;
+    margin: 20px;
+    padding: 1.6rem;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.5s;
+    animation-name: bb;
+    animation-duration:5s ;
+}
+@keyframes bb{
+    from{
+        background-color: var(--secondary-color);
+    }
+    to{
+        background-color: rgb(0, 0, 0);
+    }
+}
+
+
+
+
+
+
+.skilscontent .item:hover{
+    box-shadow: 8px 8px 8px rgb(139, 138, 138);
+}
+
+.servicesco{
+    color: var(--secondary-color);
+}
+
+.serveses{
+    background-color: #00f4ab0c;
+}
+
+
+.serveses .row {
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    margin-top: 2rem;
+    text-align: center;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    margin-bottom: 30px;
+}
+
+.serveses .item{
+    background-color: white;
+    padding: 30px 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 7px; 
+    transition: all 0.5 ease; 
+    animation-name: anas;
+    animation-duration:5s ;
+}
+@keyframes anas{
+    from{
+        background-color: var(--primary-color);
+    }
+    to{
+        background-color: white;
+    }
+}
+
+
+
+
+.serveses .item:hover{
+    transform: scale(1.05);
+}
+
+.serveses img{
+    max-width: 65px;
+}
+
+.serveses .contener{
+    margin: 0 40px;
+}
+
+.serveses{
+    padding: 4rem 0 ;
+}  
+
+.serveses h3{
+    margin: 15px 0;
+    color: var(--primary-color);
+}
+
+.serveses p {
+    font-size: 14px;
+}
+
+
+
+.touch{
+    color: var(--secondary-color);
+}
+
+.getin{
+    color: white;
+}
+
+
+
+.contact .row{
+    
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    background: white;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
+    padding: 2rem 3rem;
+    border-radius: 10px;
+    column-gap: 2rem;
+    width: 1100px;
+    margin: auto;
+    margin-top: 4rem;
+   
+}
+
+.contact{
+    padding: 4rem 0;
+}
+
+.contact input , textarea{
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #00f4ab0c;
+    border: 1px solid #bbb;
+}
+
+button{
+    border: none;
+    
+}
+.contact img{
+    width: 400px;
+}
+
+.fa-solid fa-headset{
+color: white;
+}
+
+.why{
+    text-align: center;
+    font-size: 38px;
+    color: var(--primary-color);
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.back{
+    position: absolute;
+    margin-left: 1420px;
+    margin-bottom: 0px;  
+}
+
